@@ -1,0 +1,18 @@
+[
+  {
+    "ContainingType": "IntervalApi.Controllers.IntervalsController",
+    "Method": "Intersect",
+    "RelativePath": "api/intervals/intersect",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "IntervalApi.Controllers.IntervalsController\u002BIntervalRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  }
+]
