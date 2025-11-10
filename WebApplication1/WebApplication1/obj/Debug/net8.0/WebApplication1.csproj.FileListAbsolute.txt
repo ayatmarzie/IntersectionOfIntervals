@@ -33,3 +33,39 @@ D:\C-sharp in general\WebApplication1\WebApplication1\obj\Debug\net8.0\refint\We
 D:\C-sharp in general\WebApplication1\WebApplication1\obj\Debug\net8.0\WebApplication1.pdb
 D:\C-sharp in general\WebApplication1\WebApplication1\obj\Debug\net8.0\WebApplication1.genruntimeconfig.cache
 D:\C-sharp in general\WebApplication1\WebApplication1\obj\Debug\net8.0\ref\WebApplication1.dll
+C:\Work\IntersectionOfIntervals\WebApplication1\WebApplication1\bin\Debug\net8.0\appsettings.Development.json
+C:\Work\IntersectionOfIntervals\WebApplication1\WebApplication1\bin\Debug\net8.0\appsettings.json
+C:\Work\IntersectionOfIntervals\WebApplication1\WebApplication1\bin\Debug\net8.0\WebApplication1.staticwebassets.endpoints.json
+C:\Work\IntersectionOfIntervals\WebApplication1\WebApplication1\bin\Debug\net8.0\WebApplication1.exe
+C:\Work\IntersectionOfIntervals\WebApplication1\WebApplication1\bin\Debug\net8.0\WebApplication1.deps.json
+C:\Work\IntersectionOfIntervals\WebApplication1\WebApplication1\bin\Debug\net8.0\WebApplication1.runtimeconfig.json
+C:\Work\IntersectionOfIntervals\WebApplication1\WebApplication1\bin\Debug\net8.0\WebApplication1.dll
+C:\Work\IntersectionOfIntervals\WebApplication1\WebApplication1\bin\Debug\net8.0\WebApplication1.pdb
+C:\Work\IntersectionOfIntervals\WebApplication1\WebApplication1\bin\Debug\net8.0\Microsoft.OpenApi.dll
+C:\Work\IntersectionOfIntervals\WebApplication1\WebApplication1\bin\Debug\net8.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\Work\IntersectionOfIntervals\WebApplication1\WebApplication1\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Work\IntersectionOfIntervals\WebApplication1\WebApplication1\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Work\IntersectionOfIntervals\WebApplication1\WebApplication1\obj\Debug\net8.0\WebApplication1.csproj.AssemblyReference.cache
+C:\Work\IntersectionOfIntervals\WebApplication1\WebApplication1\obj\Debug\net8.0\rpswa.dswa.cache.json
+C:\Work\IntersectionOfIntervals\WebApplication1\WebApplication1\obj\Debug\net8.0\WebApplication1.GeneratedMSBuildEditorConfig.editorconfig
+C:\Work\IntersectionOfIntervals\WebApplication1\WebApplication1\obj\Debug\net8.0\WebApplication1.AssemblyInfoInputs.cache
+C:\Work\IntersectionOfIntervals\WebApplication1\WebApplication1\obj\Debug\net8.0\WebApplication1.AssemblyInfo.cs
+C:\Work\IntersectionOfIntervals\WebApplication1\WebApplication1\obj\Debug\net8.0\WebApplication1.csproj.CoreCompileInputs.cache
+C:\Work\IntersectionOfIntervals\WebApplication1\WebApplication1\obj\Debug\net8.0\WebApplication1.MvcApplicationPartsAssemblyInfo.cs
+C:\Work\IntersectionOfIntervals\WebApplication1\WebApplication1\obj\Debug\net8.0\WebApplication1.MvcApplicationPartsAssemblyInfo.cache
+C:\Work\IntersectionOfIntervals\WebApplication1\WebApplication1\obj\Debug\net8.0\WebApplication1.sourcelink.json
+C:\Work\IntersectionOfIntervals\WebApplication1\WebApplication1\obj\Debug\net8.0\rjimswa.dswa.cache.json
+C:\Work\IntersectionOfIntervals\WebApplication1\WebApplication1\obj\Debug\net8.0\rjsmrazor.dswa.cache.json
+C:\Work\IntersectionOfIntervals\WebApplication1\WebApplication1\obj\Debug\net8.0\rjsmcshtml.dswa.cache.json
+C:\Work\IntersectionOfIntervals\WebApplication1\WebApplication1\obj\Debug\net8.0\scopedcss\bundle\WebApplication1.styles.css
+C:\Work\IntersectionOfIntervals\WebApplication1\WebApplication1\obj\Debug\net8.0\staticwebassets.build.json
+C:\Work\IntersectionOfIntervals\WebApplication1\WebApplication1\obj\Debug\net8.0\staticwebassets.build.json.cache
+C:\Work\IntersectionOfIntervals\WebApplication1\WebApplication1\obj\Debug\net8.0\staticwebassets.development.json
+C:\Work\IntersectionOfIntervals\WebApplication1\WebApplication1\obj\Debug\net8.0\staticwebassets.build.endpoints.json
+C:\Work\IntersectionOfIntervals\WebApplication1\WebApplication1\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
+C:\Work\IntersectionOfIntervals\WebApplication1\WebApplication1\obj\Debug\net8.0\WebAppli.7D14BD69.Up2Date
+C:\Work\IntersectionOfIntervals\WebApplication1\WebApplication1\obj\Debug\net8.0\WebApplication1.dll
+C:\Work\IntersectionOfIntervals\WebApplication1\WebApplication1\obj\Debug\net8.0\refint\WebApplication1.dll
+C:\Work\IntersectionOfIntervals\WebApplication1\WebApplication1\obj\Debug\net8.0\WebApplication1.pdb
+C:\Work\IntersectionOfIntervals\WebApplication1\WebApplication1\obj\Debug\net8.0\WebApplication1.genruntimeconfig.cache
+C:\Work\IntersectionOfIntervals\WebApplication1\WebApplication1\obj\Debug\net8.0\ref\WebApplication1.dll

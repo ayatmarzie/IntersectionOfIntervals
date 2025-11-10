@@ -35,6 +35,54 @@
           }
         }
       }
+    },
+    "/api/intervals/intersect2": {
+      "post": {
+        "tags": [
+          "Intervals"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/IntervalRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/IntervalRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/IntervalRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/IntervalResponse"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/IntervalResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/IntervalResponse"
+                }
+              }
+            }
+          }
+        }
+      }
     }
   },
   "components": {
@@ -43,20 +91,37 @@
         "type": "object",
         "properties": {
           "interval1": {
-            "type": "array",
-            "items": {
-              "type": "number",
-              "format": "float"
-            },
-            "nullable": true
+            "$ref": "#/components/schemas/intervalPoint"
           },
           "interval2": {
-            "type": "array",
-            "items": {
-              "type": "number",
-              "format": "float"
-            },
+            "$ref": "#/components/schemas/intervalPoint"
+          }
+        },
+        "additionalProperties": false
+      },
+      "IntervalResponse": {
+        "type": "object",
+        "properties": {
+          "intersection": {
+            "$ref": "#/components/schemas/intervalPoint"
+          },
+          "error": {
+            "type": "string",
             "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "intervalPoint": {
+        "type": "object",
+        "properties": {
+          "x": {
+            "type": "number",
+            "format": "float"
+          },
+          "y": {
+            "type": "number",
+            "format": "float"
           }
         },
         "additionalProperties": false
