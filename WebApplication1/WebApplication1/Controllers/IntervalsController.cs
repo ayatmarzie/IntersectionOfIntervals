@@ -5,11 +5,8 @@ namespace IntervalApi.Controllers;
 
 [ApiController]
 [Route("api/intervals")]
-public class IntervalsController : ControllerBase
+public partial class IntervalsController : ControllerBase
 {
-    public record intervalPoint(float x,float y);
-    public record IntervalRequest(intervalPoint Interval1, intervalPoint Interval2);
-    public record IntervalResponse(intervalPoint? Intersection, string? Error = null);
 
 
     [HttpPost("intersect")]
@@ -24,6 +21,13 @@ public class IntervalsController : ControllerBase
         // ---- 3. Compute intersection -------------------------------------------
         float start = Math.Max(x1, x2);
         float end = Math.Min(y1, y2);
+
+        if (start > end)
+        {
+            return BadRequest(new IntervalResponse(null, "No intersection between these two intervals!"));
+        }
+
+
 
         if (start > end)
         {
