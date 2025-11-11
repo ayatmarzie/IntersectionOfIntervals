@@ -1,0 +1,6 @@
+@StreamAddFee_HostAddress = http://localhost:5209
+
+GET {{StreamAddFee_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
