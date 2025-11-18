@@ -10,20 +10,26 @@ namespace Core.Services
 {
     public class UniversityService(UniversityDbContext db)
     {
+        
         public void AddStudent(Student student)
         {
+            //db.aqt4.Include(x => x.history).Include(y=>y.bqt1).Where();
+            //db.Students.Where(x => x.Enrollments.Any(x => x.CourseID == 1050));
             db.Students.Add(student);
             db.SaveChanges();
         }
 
         public IEnumerable<Student> GetStudents()
         {
-            return  db.Students.ToArray();
+           var Query = db.Students.Select(x=>new { name=x.name,eCount=x.Enrollments.Count,ncourse=x.Enrollments.Select(y=>y.Course.name)}).AsQueryable();
+            var q = Query.ToQueryString();
+            var result = Query.ToArray();
+            return new List<Student>();
             
         }
         public Student GetStudentById(int id)
         {
-            return db.Students.Find(id);
+            return db.Students.Include(x=>x.Enrollments).ThenInclude(x=>x.Course).FirstOrDefault(x=>x.id==id);
         }
 
         public void UpdateStudent(Student student)

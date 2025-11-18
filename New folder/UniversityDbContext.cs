@@ -18,11 +18,6 @@ namespace TestEF
 
             public DbSet<Course> Courses { get; set; }
             public DbSet<Student> Students { get; set; }
-           public DbSet <aqt> aqt4 { get; set; }
-            public DbSet<bqt> bqt4 { get; set; }
-            public DbSet<cqt> cqt4 { get; set; }
-            public DbSet<r> r { get; set; }
-
             protected override void OnModelCreating(ModelBuilder Builder)
             {
                 Builder.Entity<Course>().ToTable("Course");

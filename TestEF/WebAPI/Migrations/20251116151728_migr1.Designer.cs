@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using TestEF.ClassLibrary1;
 
@@ -11,9 +12,11 @@ using TestEF.ClassLibrary1;
 namespace WebAPI.Migrations
 {
     [DbContext(typeof(UniversityDbContext))]
-    partial class UniversityDbContextModelSnapshot : ModelSnapshot
+    [Migration("20251116151728_migr1")]
+    partial class migr1
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -136,93 +139,6 @@ namespace WebAPI.Migrations
                     b.ToTable("Teacher");
                 });
 
-            modelBuilder.Entity("TestEF.ClassLibrary1.aqt", b =>
-                {
-                    b.Property<int>("id5")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("id5"));
-
-                    b.Property<int?>("bqtID1")
-                        .HasColumnType("int");
-
-                    b.Property<int?>("bqtID2")
-                        .HasColumnType("int");
-
-                    b.Property<int?>("lastID")
-                        .HasColumnType("int");
-
-                    b.HasKey("id5");
-
-                    b.HasIndex("bqtID1");
-
-                    b.HasIndex("bqtID2");
-
-                    b.HasIndex("lastID");
-
-                    b.ToTable("aqt4");
-                });
-
-            modelBuilder.Entity("TestEF.ClassLibrary1.bqt", b =>
-                {
-                    b.Property<int>("id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("id"));
-
-                    b.HasKey("id");
-
-                    b.ToTable("bqt4");
-                });
-
-            modelBuilder.Entity("TestEF.ClassLibrary1.cqt", b =>
-                {
-                    b.Property<int>("id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("id"));
-
-                    b.HasKey("id");
-
-                    b.ToTable("cqt4");
-                });
-
-            modelBuilder.Entity("TestEF.ClassLibrary1.r", b =>
-                {
-                    b.Property<int>("id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("id"));
-
-                    b.Property<int>("aqtID")
-                        .HasColumnType("int");
-
-                    b.HasKey("id");
-
-                    b.HasIndex("aqtID");
-
-                    b.ToTable("r");
-                });
-
-            modelBuilder.Entity("aqtcqt", b =>
-                {
-                    b.Property<int>("aqtid5")
-                        .HasColumnType("int");
-
-                    b.Property<int>("cqtid")
-                        .HasColumnType("int");
-
-                    b.HasKey("aqtid5", "cqtid");
-
-                    b.HasIndex("cqtid");
-
-                    b.ToTable("aqtcqt");
-                });
-
             modelBuilder.Entity("TestEF.ClassLibrary1.Enrollment", b =>
                 {
                     b.HasOne("TestEF.ClassLibrary1.Course", "Course")
@@ -236,7 +152,7 @@ namespace WebAPI.Migrations
                         .HasForeignKey("SemesterID");
 
                     b.HasOne("TestEF.ClassLibrary1.Student", "Student")
-                        .WithMany("Enrollments")
+                        .WithMany()
                         .HasForeignKey("StudentID")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -246,75 +162,6 @@ namespace WebAPI.Migrations
                     b.Navigation("Student");
 
                     b.Navigation("semester");
-                });
-
-            modelBuilder.Entity("TestEF.ClassLibrary1.aqt", b =>
-                {
-                    b.HasOne("TestEF.ClassLibrary1.bqt", "bqt1")
-                        .WithMany("aqt1")
-                        .HasForeignKey("bqtID1");
-
-                    b.HasOne("TestEF.ClassLibrary1.bqt", "bqt2")
-                        .WithMany("aqt2")
-                        .HasForeignKey("bqtID2");
-
-                    b.HasOne("TestEF.ClassLibrary1.r", "last")
-                        .WithMany("aqt2")
-                        .HasForeignKey("lastID");
-
-                    b.Navigation("bqt1");
-
-                    b.Navigation("bqt2");
-
-                    b.Navigation("last");
-                });
-
-            modelBuilder.Entity("TestEF.ClassLibrary1.r", b =>
-                {
-                    b.HasOne("TestEF.ClassLibrary1.aqt", "aqt1")
-                        .WithMany("history")
-                        .HasForeignKey("aqtID")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("aqt1");
-                });
-
-            modelBuilder.Entity("aqtcqt", b =>
-                {
-                    b.HasOne("TestEF.ClassLibrary1.aqt", null)
-                        .WithMany()
-                        .HasForeignKey("aqtid5")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("TestEF.ClassLibrary1.cqt", null)
-                        .WithMany()
-                        .HasForeignKey("cqtid")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-                });
-
-            modelBuilder.Entity("TestEF.ClassLibrary1.Student", b =>
-                {
-                    b.Navigation("Enrollments");
-                });
-
-            modelBuilder.Entity("TestEF.ClassLibrary1.aqt", b =>
-                {
-                    b.Navigation("history");
-                });
-
-            modelBuilder.Entity("TestEF.ClassLibrary1.bqt", b =>
-                {
-                    b.Navigation("aqt1");
-
-                    b.Navigation("aqt2");
-                });
-
-            modelBuilder.Entity("TestEF.ClassLibrary1.r", b =>
-                {
-                    b.Navigation("aqt2");
                 });
 #pragma warning restore 612, 618
         }

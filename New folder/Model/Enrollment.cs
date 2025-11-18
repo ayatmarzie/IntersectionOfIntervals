@@ -1,6 +1,4 @@
 ﻿
-using System.Text.Json.Serialization;
-
 namespace TestEF
 {
     namespace ClassLibrary1
@@ -10,11 +8,8 @@ namespace TestEF
             public int EnrollmentID { get; set; }
             public int CourseID { get; set; }
             public int StudentID { get; set; }
-            public int? SemesterID { get; set; }
             public Grade? Grade { get; set; }
-            public Semester semester { get; set; }
             public Course Course { get; set; }
-            [JsonIgnore]
             public Student Student { get; set; }
         }
     }

@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using TestEF.ClassLibrary1;
 
@@ -11,9 +12,11 @@ using TestEF.ClassLibrary1;
 namespace WebAPI.Migrations
 {
     [DbContext(typeof(UniversityDbContext))]
-    partial class UniversityDbContextModelSnapshot : ModelSnapshot
+    [Migration("20251116163652_mn")]
+    partial class mn
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -236,7 +239,7 @@ namespace WebAPI.Migrations
                         .HasForeignKey("SemesterID");
 
                     b.HasOne("TestEF.ClassLibrary1.Student", "Student")
-                        .WithMany("Enrollments")
+                        .WithMany()
                         .HasForeignKey("StudentID")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -293,11 +296,6 @@ namespace WebAPI.Migrations
                         .HasForeignKey("cqtid")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
-                });
-
-            modelBuilder.Entity("TestEF.ClassLibrary1.Student", b =>
-                {
-                    b.Navigation("Enrollments");
                 });
 
             modelBuilder.Entity("TestEF.ClassLibrary1.aqt", b =>

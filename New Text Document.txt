@@ -1,0 +1,6 @@
+generic(building packet,class,method,where)
+abstraction (inheritancy compare)
+نماد، سهم پایه، اختیار خرید و فروش،futures,
+option strategies:bull call spread, covered call, conversion
+log config(override(default class->file appsetting->environment OS)
+IOptions(class config)
